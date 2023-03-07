@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my blog</title>
+    <link rel="stylesheet" href="myBlog.css" />
+  </head>
+  <body>
+    <div class="loginForm">
+      <form
+        class="loginRegisterForm"
+        id="formLogin"
+        action="https://testapi.io/api/lukenzas/resource/loginRegister"
+        method="post"
+      >
+        <!-- <label for="Nickname">Nickname</label> -->
+        <div class="loginRegisterFormContent">
+          <div class="loginNickname inputField">
+            <input
+              class="inputt"
+              type="text"
+              name="Nickname"
+              id="nicknameInput"
+              placeholder="Nickname"
+            />
+          </div>
+
+          <!-- <label for="Password">Password</label> -->
+          <div class="loginPassword inputField">
+            <input
+              class="inputt"
+              type="password"
+              name="Password"
+              id="passwordInput"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+        <div class="btnDiv">
+          <button class="myblogRegister" id="registerBtn">Register</button>
+          <button class="myblogLogin" id="loginBtn">Login</button>
+        </div>
+      </form>
+    </div>
+    <!-- ////////////////////////////////////////////// -->
+    <div class="blogInputsForm" id="blogInputs">
+      <form
+        method="post"
+        id="postNewBlog"
+        action="https://testapi.io/api/lukenzas/resource/blogpostai"
+      >
+        <div class="blogInputsFormContent loginRegisterFormContent">
+          <!-- <label for="foto">Picture</label> -->
+          <div class="inputField">
+            <input
+              class="inputt"
+              type="text"
+              name="url"
+              id="fotoUrl"
+              placeholder="Picture url"
+            />
+          </div>
+          <!-- <label for="postTitle">PostTitle</label> -->
+          <div class="inputField">
+            <input
+              class="inputt"
+              type="text"
+              name="title"
+              id="titleInput"
+              placeholder="Title"
+            />
+          </div>
+          <!-- <label for="content">Content</label> -->
+          <div class="inputField">
+            <input
+              class="inputt"
+              type="text"
+              name="content"
+              id="contentInput"
+              placeholder="Content"
+            />
+          </div>
+        </div>
+        <div class="btnDiv">
+          <button class="myblogLogin" id="submitNewPost">
+            Submit new post
+          </button>
+          <!-- <button class="myblogLogin"><a href="#index.html">Back</a></button> -->
+        </div>
+      </form>
+    </div>
+    <div id="blogPosts"></div>
+  </body>
+  <script src="myBlog.js"></script>
+</html>

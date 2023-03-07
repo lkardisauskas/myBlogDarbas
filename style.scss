@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  .divNav {
+    display: flex;
+    margin: 30px;
+    justify-content: space-between;
+  }
+
+  #burger-menu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    margin: 30px;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  #burger-menu span,
+  #burger-menu span:before,
+  #burger-menu span:after {
+    background: black;
+    display: block;
+    height: 4px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+  }
+  #burger-menu span:before,
+  #burger-menu span:after {
+    content: "";
+  }
+  #burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 27px;
+  }
+  #burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 16px;
+  }
+  #burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 20px;
+  }
+
+  #burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+  }
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+  }
+  #burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+  }
+
+  #menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+
+    a:hover {
+      color: #bb5a3a;
+    }
+  }
+
+  #menu.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  #menu li {
+    list-style: none;
+  }
+  #menu a {
+    color: #fff;
+    display: block;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
+
+  .welcome {
+    display: flex;
+    :nth-child(2) {
+      display: none;
+    }
+    :nth-child(3) {
+      display: none;
+    }
+    img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+    }
+    h2 {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+
+  .lifeBlog {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .blogFeed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      width: 50%;
+      max-width: 350px;
+      margin: 10px auto;
+      padding: 10px;
+      border: 0;
+      background: #bb5a3a;
+      border-radius: 4px;
+      outline: 0;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+    }
+
+    .emailInstagramContainer {
+      display: flex;
+      flex-direction: column;
+      background: #fef2f0;
+
+      .emailForm {
+        background: #bb5a3a;
+        width: 90%;
+        text-align: center;
+        max-width: 400px;
+        height: 300px;
+        max-height: 400px;
+        margin: auto;
+        margin-top: 20px;
+
+        h2 {
+          margin: 20px 35px;
+          color: white;
+          font-size: 30px;
+        }
+        .emailAlign {
+          text-align: left;
+          width: 80%;
+          margin: auto;
+          margin-top: 15px;
+          color: white;
+          font-size: 16px;
+        }
+        .emailBtnNInput {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          gap: 10px;
+
+          margin: auto;
+          margin-top: 10px;
+
+          input {
+            height: 20px;
+            font-size: 16px;
+            border: 0;
+            outline: none;
+            border-bottom: 2px solid #fff;
+            background: #bb5a3a;
+          }
+          button {
+            width: 60%;
+            margin: auto;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            background: #f6e1c3;
+            border-radius: 4px;
+            letter-spacing: 0.2px;
+            outline: 0;
+            border: 0.1px solid rgb(255, 255, 255);
+            margin-bottom: 30px;
+          }
+          button:hover {
+            background: #bb5a3a;
+            color: #f6e1c3;
+          }
+          p {
+            color: white;
+          }
+        }
+        p {
+          color: white;
+        }
+      }
+
+      .instagramCon {
+        background: #fef2f0;
+        h2 {
+          text-align: center;
+          color: black;
+          margin: 15px 0;
+        }
+        .igPicturesCon {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 80%;
+            max-width: 300px;
+            height: 300px;
+            object-fit: cover;
+          }
+        }
+        .socialMedia {
+          display: flex;
+          gap: 30px;
+          align-items: center;
+          justify-content: center;
+          margin: 20px 0;
+          svg {
+            height: 25px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background: #fef2f0;
+    margin-top: 70px;
+    h2 {
+      margin: 10px 30px;
+      text-align: center;
+    }
+
+    .fName,
+    .lName,
+    .email,
+    .message {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: auto;
+      color: black;
+      input {
+        font-size: 16px;
+        width: 100%;
+        padding: 10px 1px;
+        border: 0;
+        border-bottom: 1px solid #747474;
+        outline: none;
+        background: #fef2f0;
+      }
+
+      label {
+        margin-top: 10px;
+      }
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 30px;
+      button {
+        width: 60%;
+        margin: auto;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        background: #f6e1c3;
+        border-radius: 4px;
+        letter-spacing: 0.2px;
+        outline: 0;
+        border: 0.1px solid rgb(218, 213, 213);
+        margin-bottom: 10px;
+        margin-top: 40px;
+      }
+      button:hover {
+        background: #bb5a3a;
+        color: #f6e1c3;
+      }
+    }
+  }
+  .nav {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .blogFeedPosts {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    max-width: 800px;
+    background: #fef2f0;
+  }
+
+  .welcome {
+    :nth-child(2) {
+      display: inline !important;
+    }
+  }
+  .footer {
+    width: 100%;
+
+    .col1,
+    .col2 {
+      display: flex;
+      gap: 15px;
+      width: 50%;
+      margin: auto;
+    }
+    .button {
+      button {
+        max-width: 100px;
+      }
+    }
+  }
+
+  .emailInstagramContainer {
+    .instagramCon {
+      width: 100%;
+      .igPicturesCon {
+        flex-direction: row !important;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+      }
+    }
+  }
+
+  .footer {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 900px) {
+  .blogFeedPosts {
+    background: #fef2f0;
+  }
+
+  #burger-menu {
+    display: none;
+  }
+  .nav {
+    display: flex !important;
+    ul {
+      display: flex;
+      gap: 20px;
+
+      text-decoration: none;
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+      }
+      a:hover {
+        color: salmon;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .blogFeedPosts {
+    background: #fef2f0;
+  }
+  .welcome {
+    :nth-child(3) {
+      display: inline !important;
+    }
+  }
+}

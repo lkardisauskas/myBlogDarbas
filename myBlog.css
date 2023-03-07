@@ -1,0 +1,66 @@
+body {
+  background: salmon;
+}
+
+.loginForm {
+  background: white;
+  max-width: 500px;
+  margin: 65px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 2px 25px rgb(0, 0, 0 / 20%);
+}
+
+.loginRegisterFormContent {
+  padding: 35px;
+  text-align: center;
+}
+
+.inputField {
+  padding: 12px 5px;
+}
+
+.inputt {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+}
+
+.btnDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.btnDiv button {
+  width: 100%;
+  border: none;
+  padding: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #e8e9ec;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  letter-spacing: 0.2px;
+  outline: 0;
+  border: 0.1px solid rgb(218, 213, 213);
+}
+
+.btnDiv button:hover {
+  background: #2d3b55;
+  color: #fff;
+  text-decoration: none;
+}
+
+.blogInputsForm {
+  background: white;
+  max-width: 500px;
+  margin: 65px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 2px 25px rgb(0, 0, 0 / 20%);
+}

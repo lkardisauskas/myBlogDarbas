@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body .divNav {
+  display: flex;
+  margin: 30px;
+  justify-content: space-between;
+}
+body #burger-menu {
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  margin: 30px;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+body #burger-menu span,
+body #burger-menu span:before,
+body #burger-menu span:after {
+  background: black;
+  display: block;
+  height: 4px;
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+body #burger-menu span:before,
+body #burger-menu span:after {
+  content: "";
+}
+body #burger-menu span {
+  right: 0px;
+  top: 13px;
+  width: 27px;
+}
+body #burger-menu span:before {
+  left: 0px;
+  top: -10px;
+  width: 16px;
+}
+body #burger-menu span:after {
+  left: 0px;
+  top: 10px;
+  width: 20px;
+}
+body #burger-menu.close span {
+  transform: rotate(-45deg);
+  top: 13px;
+  width: 27px;
+}
+body #burger-menu.close span:before {
+  top: 0px;
+  transform: rotate(90deg);
+  width: 27px;
+}
+body #burger-menu.close span:after {
+  top: 0px;
+  left: 0;
+  transform: rotate(90deg);
+  opacity: 0;
+  width: 0;
+}
+body #menu {
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+body #menu a:hover {
+  color: #bb5a3a;
+}
+body #menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+body #menu li {
+  list-style: none;
+}
+body #menu a {
+  color: #fff;
+  display: block;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+body .welcome {
+  display: flex;
+}
+body .welcome :nth-child(2) {
+  display: none;
+}
+body .welcome :nth-child(3) {
+  display: none;
+}
+body .welcome img {
+  width: 100%;
+  max-height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .welcome h2 {
+  text-align: center;
+  padding: 10px;
+}
+body .lifeBlog h2 {
+  text-align: center;
+}
+body .blogFeed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .blogFeed a {
+  width: 50%;
+  max-width: 350px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 0;
+  background: #bb5a3a;
+  border-radius: 4px;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+body .blogFeed .emailInstagramContainer {
+  display: flex;
+  flex-direction: column;
+  background: #fef2f0;
+}
+body .blogFeed .emailInstagramContainer .emailForm {
+  background: #bb5a3a;
+  width: 90%;
+  text-align: center;
+  max-width: 400px;
+  height: 300px;
+  max-height: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+body .blogFeed .emailInstagramContainer .emailForm h2 {
+  margin: 20px 35px;
+  color: white;
+  font-size: 30px;
+}
+body .blogFeed .emailInstagramContainer .emailForm .emailAlign {
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  margin-top: 15px;
+  color: white;
+  font-size: 16px;
+}
+body .blogFeed .emailInstagramContainer .emailForm .emailBtnNInput {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 10px;
+  margin: auto;
+  margin-top: 10px;
+}
+body .blogFeed .emailInstagramContainer .emailForm .emailBtnNInput input {
+  height: 20px;
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  background: #bb5a3a;
+}
+body .blogFeed .emailInstagramContainer .emailForm .emailBtnNInput button {
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #f6e1c3;
+  border-radius: 4px;
+  letter-spacing: 0.2px;
+  outline: 0;
+  border: 0.1px solid rgb(255, 255, 255);
+  margin-bottom: 30px;
+}
+body .blogFeed .emailInstagramContainer .emailForm .emailBtnNInput button:hover {
+  background: #bb5a3a;
+  color: #f6e1c3;
+}
+body .blogFeed .emailInstagramContainer .emailForm .emailBtnNInput p {
+  color: white;
+}
+body .blogFeed .emailInstagramContainer .emailForm p {
+  color: white;
+}
+body .blogFeed .emailInstagramContainer .instagramCon {
+  background: #fef2f0;
+}
+body .blogFeed .emailInstagramContainer .instagramCon h2 {
+  text-align: center;
+  color: black;
+  margin: 15px 0;
+}
+body .blogFeed .emailInstagramContainer .instagramCon .igPicturesCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+body .blogFeed .emailInstagramContainer .instagramCon .igPicturesCon img {
+  width: 80%;
+  max-width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .blogFeed .emailInstagramContainer .instagramCon .socialMedia {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+body .blogFeed .emailInstagramContainer .instagramCon .socialMedia svg {
+  height: 25px;
+  cursor: pointer;
+}
+body .footer {
+  background: #fef2f0;
+  margin-top: 70px;
+}
+body .footer h2 {
+  margin: 10px 30px;
+  text-align: center;
+}
+body .footer .fName,
+body .footer .lName,
+body .footer .email,
+body .footer .message {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  color: black;
+}
+body .footer .fName input,
+body .footer .lName input,
+body .footer .email input,
+body .footer .message input {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  background: #fef2f0;
+}
+body .footer .fName label,
+body .footer .lName label,
+body .footer .email label,
+body .footer .message label {
+  margin-top: 10px;
+}
+body .footer .button {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+}
+body .footer .button button {
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #f6e1c3;
+  border-radius: 4px;
+  letter-spacing: 0.2px;
+  outline: 0;
+  border: 0.1px solid rgb(218, 213, 213);
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+body .footer .button button:hover {
+  background: #bb5a3a;
+  color: #f6e1c3;
+}
+body .nav {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .blogFeedPosts {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    max-width: 800px;
+    background: #fef2f0;
+  }
+  .welcome :nth-child(2) {
+    display: inline !important;
+  }
+  .footer {
+    width: 100%;
+  }
+  .footer .col1,
+  .footer .col2 {
+    display: flex;
+    gap: 15px;
+    width: 50%;
+    margin: auto;
+  }
+  .footer .button button {
+    max-width: 100px;
+  }
+  .emailInstagramContainer .instagramCon {
+    width: 100%;
+  }
+  .emailInstagramContainer .instagramCon .igPicturesCon {
+    flex-direction: row !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  .footer {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 900px) {
+  .blogFeedPosts {
+    background: #fef2f0;
+  }
+  #burger-menu {
+    display: none;
+  }
+  .nav {
+    display: flex !important;
+  }
+  .nav ul {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+  }
+  .nav ul li {
+    list-style: none;
+  }
+  .nav ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+  }
+  .nav ul a:hover {
+    color: salmon;
+  }
+}
+@media (min-width: 1200px) {
+  .blogFeedPosts {
+    background: #fef2f0;
+  }
+  .welcome :nth-child(3) {
+    display: inline !important;
+  }
+}/*# sourceMappingURL=style.css.map */
